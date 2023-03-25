@@ -53,7 +53,7 @@ function Dashboard() {
               <CardIcon color="warning">
                 <Icon>content_copy</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
+              <p className={classes.cardCategory}>Contratos</p>
               <h3 className={classes.cardTitle}>
                 49/50 <small>GB</small>
               </h3>
@@ -76,7 +76,7 @@ function Dashboard() {
               <CardIcon color="dark">
                 <Store />
               </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
+              <p className={classes.cardCategory}>Rendimiento</p>
               <h3 className={classes.cardTitle}>$34,245</h3>
             </CardHeader>
             <CardFooter stats>
@@ -93,7 +93,7 @@ function Dashboard() {
               <CardIcon color="danger">
                 <Icon>info_outline</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Fixed Issues</p>
+              <p className={classes.cardCategory}>Contratos Vencidos</p>
               <h3 className={classes.cardTitle}>75</h3>
             </CardHeader>
             <CardFooter stats>
@@ -110,7 +110,7 @@ function Dashboard() {
               <CardIcon color="info">
                 <Accessibility />
               </CardIcon>
-              <p className={classes.cardCategory}>Followers</p>
+              <p className={classes.cardCategory}>Clientes</p>
               <h3 className={classes.cardTitle}>+245</h3>
             </CardHeader>
             <CardFooter stats>
@@ -135,17 +135,17 @@ function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>Inversiones Diarias</h4>
               <p className={classes.cardCategory}>
                 <span className={classes.successText}>
                   <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                 </span>{" "}
-                increase in today sales.
+                Aumento en las inversiones.
               </p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago
+                <AccessTime /> actualizado hace 4 minutos
               </div>
             </CardFooter>
           </Card>
@@ -163,12 +163,14 @@ function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Clientes al mes</h4>
+              <p className={classes.cardCategory}>
+                Ultimo mes de contrataciones
+              </p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <AccessTime /> actualizado hace 2 minutos
               </div>
             </CardFooter>
           </Card>
@@ -185,18 +187,22 @@ function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>
+                Inversiones en el ultimo mes
+              </h4>
+              <p className={classes.cardCategory}>
+                Inversiones en el ultimo mes
+              </p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <AccessTime /> actualizado hace 3 minutos
               </div>
             </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
-      <GridContainer>
+      {/* <GridContainer>
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title="Tasks:"
@@ -260,7 +266,7 @@ function Dashboard() {
             </CardBody>
           </Card>
         </GridItem>
-      </GridContainer>
+      </GridContainer> */}
     </div>
   );
 }

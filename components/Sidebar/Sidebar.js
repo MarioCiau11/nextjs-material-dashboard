@@ -24,6 +24,7 @@ export default function Sidebar(props) {
   // creates styles for this component
   const useStyles = makeStyles(styles);
   const classes = useStyles();
+  console.log(classes);
   // verifies if routeName is the one active (in browser input)
   function activeRoute(routeName) {
     return router.route.indexOf(routeName) > -1 ? true : false;
@@ -85,7 +86,7 @@ export default function Sidebar(props) {
   var brand = (
     <div className={classes.logo}>
       <a
-        href="https://www.creative-tim.com?ref=njsmd-sidebar"
+        href="#"
         className={classNames(classes.logoLink, {
           [classes.logoLinkRTL]: props.rtlActive,
         })}
