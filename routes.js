@@ -24,8 +24,18 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
+import Image from "@material-ui/icons/Image";
+
 
 const dashboardRoutes = [
+  {
+    path: "/login",
+    name: "login",
+    rtlName: "لوحة القيادة",
+    icon: Image,
+
+    layout: "/login",
+  },
   {
     path: "/dashboard",
     name: "Dashboard",
