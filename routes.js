@@ -19,22 +19,25 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Person from "@material-ui/icons/Person";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import BubbleChart from "@material-ui/icons/BubbleChart";
-import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
-import Unarchive from "@material-ui/icons/Unarchive";
-import Language from "@material-ui/icons/Language";
 import Image from "@material-ui/icons/Image";
-
 
 const dashboardRoutes = [
   {
-    path: "/login",
-    name: "login",
-    rtlName: "لوحة القيادة",
+    path: "/register",
+    name: "Registro",
     icon: Image,
 
-    layout: "/login",
+    layout: "/admin",
+    isShow: false,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    icon: Image,
+
+    layout: "/admin",
+    isShow: false,
   },
   {
     path: "/dashboard",
@@ -43,6 +46,7 @@ const dashboardRoutes = [
     icon: Dashboard,
 
     layout: "/admin",
+    isShow: true,
   },
   {
     path: "/user-profile",
@@ -51,6 +55,7 @@ const dashboardRoutes = [
     icon: Person,
 
     layout: "/admin",
+    isShow: true,
   },
   // {
   //   path: "/table-list",
@@ -67,6 +72,7 @@ const dashboardRoutes = [
     icon: "content_paste",
 
     layout: "/admin",
+    isShow: true,
   },
   // {
   //   path: "/typography",
@@ -83,6 +89,7 @@ const dashboardRoutes = [
     icon: LibraryBooks,
 
     layout: "/admin",
+    isShow: true,
   },
   // {
   //   path: "/icons",
@@ -107,8 +114,8 @@ const dashboardRoutes = [
     icon: Notifications,
 
     layout: "/admin",
+    isShow: true,
   },
-
 ];
 
 export default dashboardRoutes;

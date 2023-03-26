@@ -50,36 +50,48 @@ export default function Sidebar(props) {
             activeRoute(prop.layout + prop.path) ||
             prop.path === "/upgrade-to-pro",
         });
-        return (
-          <Link href={prop.layout + prop.path} key={key}>
-            <a className={activePro + classes.item}>
-              <ListItem button className={classes.itemLink + listItemClasses}>
-                {typeof prop.icon === "string" ? (
-                  <Icon
-                    className={classNames(classes.itemIcon, whiteFontClasses, {
-                      [classes.itemIconRTL]: props.rtlActive,
+
+        //Mostramos el menu de los modulos del sistema
+        if (prop.isShow) {
+          return (
+            <Link href={prop.layout + prop.path} key={key}>
+              <a className={activePro + classes.item}>
+                <ListItem button className={classes.itemLink + listItemClasses}>
+                  {typeof prop.icon === "string" ? (
+                    <Icon
+                      className={classNames(
+                        classes.itemIcon,
+                        whiteFontClasses,
+                        {
+                          [classes.itemIconRTL]: props.rtlActive,
+                        }
+                      )}
+                    >
+                      {prop.icon}
+                    </Icon>
+                  ) : (
+                    <prop.icon
+                      className={classNames(
+                        classes.itemIcon,
+                        whiteFontClasses,
+                        {
+                          [classes.itemIconRTL]: props.rtlActive,
+                        }
+                      )}
+                    />
+                  )}
+                  <ListItemText
+                    primary={props.rtlActive ? prop.rtlName : prop.name}
+                    className={classNames(classes.itemText, whiteFontClasses, {
+                      [classes.itemTextRTL]: props.rtlActive,
                     })}
-                  >
-                    {prop.icon}
-                  </Icon>
-                ) : (
-                  <prop.icon
-                    className={classNames(classes.itemIcon, whiteFontClasses, {
-                      [classes.itemIconRTL]: props.rtlActive,
-                    })}
+                    disableTypography={true}
                   />
-                )}
-                <ListItemText
-                  primary={props.rtlActive ? prop.rtlName : prop.name}
-                  className={classNames(classes.itemText, whiteFontClasses, {
-                    [classes.itemTextRTL]: props.rtlActive,
-                  })}
-                  disableTypography={true}
-                />
-              </ListItem>
-            </a>
-          </Link>
-        );
+                </ListItem>
+              </a>
+            </Link>
+          );
+        }
       })}
     </List>
   );
