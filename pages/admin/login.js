@@ -48,7 +48,7 @@ function login() {
   return (
     <div className={classes.containterBody}>
       <GridContainer md={4}>
-        <GridItem xs={12} sm={12} md={8}>
+        <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="dark">
               <h4 className={classes.cardTitleWhite}>Iniciar Sesión</h4>
@@ -80,6 +80,13 @@ function login() {
                 </GridItem>
               </GridContainer>
             </CardBody>
+            {/* //poner link para registro */}
+            <CardFooter>
+              <a href="/admin/register"
+              
+              
+              >¿No tienes una cuenta?</a>
+            </CardFooter>
             <CardFooter>
               <Button color="success">Iniciar Sesión</Button>
             </CardFooter>

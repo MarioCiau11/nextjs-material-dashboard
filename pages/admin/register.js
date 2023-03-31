@@ -12,6 +12,8 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import { Link } from "@material-ui/core";
+import ImageFondo from "../../assets/img/bg7.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -30,15 +32,24 @@ const styles = {
     marginBottom: "3px",
     textDecoration: "none",
   },
+  containterBody: {
+    backgroundImage: `url(${ImageFondo})`,
+    objectFit: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "100vh",
+  },
 };
 
 function register() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.containterBody}>
       <GridContainer alignItems="center">
-        <GridItem xs={12} sm={12} md={8}>
+        <GridItem xs={12} sm={12} md={12} >
           <Card>
             <CardHeader color="dark">
               <h4 className={classes.cardTitleWhite}>Iniciar Sesión</h4>
@@ -101,7 +112,17 @@ function register() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="success">Iniciar Sesión</Button>
+              <Link href="/admin/login"
+              underline="hover"
+              color="primary"
+              >
+                <a>¿Ya tienes una cuenta?</a>
+              </Link>
+            </CardFooter>
+            <CardFooter>
+            <Button color="success">Registrarse
+            </Button>
+              
             </CardFooter>
           </Card>
         </GridItem>
