@@ -20,7 +20,7 @@ import logo from "assets/img/reactlogo.png";
 
 let ps;
 
-export default function Admin({ children, ...rest }) {
+function Admin({ children, ...rest }) {
   // used for checking current route
   const router = useRouter();
   // styles
@@ -114,3 +114,5 @@ export default function Admin({ children, ...rest }) {
     </div>
   );
 }
+
+export default Admin;

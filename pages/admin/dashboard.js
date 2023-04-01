@@ -41,6 +41,8 @@ import {
 
 import styles from "assets/jss/nextjs-material-dashboard/views/dashboardStyle.js";
 
+import WithPrivateRoute from "components/PrivateRoute/WithPrivateRoute";
+
 function Dashboard() {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
@@ -272,5 +274,5 @@ function Dashboard() {
 }
 
 Dashboard.layout = Admin;
-
+Dashboard.Auth = WithPrivateRoute;
 export default Dashboard;

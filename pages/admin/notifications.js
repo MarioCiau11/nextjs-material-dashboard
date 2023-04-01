@@ -17,6 +17,7 @@ import Snackbar from "components/Snackbar/Snackbar.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
+import WithPrivateRoute from "components/PrivateRoute/WithPrivateRoute";
 
 const styles = {
   cardCategoryWhite: {
@@ -347,5 +348,6 @@ function Notifications() {
 }
 
 Notifications.layout = Admin;
+Notifications.Auth = WithPrivateRoute;
 
 export default Notifications;

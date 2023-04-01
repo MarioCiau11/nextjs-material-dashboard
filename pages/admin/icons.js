@@ -13,6 +13,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 
 import styles from "assets/jss/nextjs-material-dashboard/views/iconsStyle.js";
+import WithPrivateRoute from "components/PrivateRoute/WithPrivateRoute";
 
 function Icons() {
   const useStyles = makeStyles(styles);
@@ -66,5 +67,6 @@ function Icons() {
 }
 
 Icons.layout = Admin;
+Icons.Auth = WithPrivateRoute;
 
 export default Icons;

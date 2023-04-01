@@ -10,6 +10,7 @@ import Table from "components/Table/Table.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
+import WithPrivateRoute from "components/PrivateRoute/WithPrivateRoute";
 
 const styles = {
   cardCategoryWhite: {
@@ -50,9 +51,7 @@ function TableList() {
         <Card>
           <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Clientes</h4>
-            <p className={classes.cardCategoryWhite}>
-              Lista de clientes
-            </p>
+            <p className={classes.cardCategoryWhite}>Lista de clientes</p>
           </CardHeader>
           <CardBody>
             <Table
@@ -70,11 +69,11 @@ function TableList() {
           </CardBody>
         </Card>
       </GridItem>
-
     </GridContainer>
   );
 }
 
 TableList.layout = Admin;
+TableList.Auth = WithPrivateRoute;
 
 export default TableList;

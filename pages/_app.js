@@ -73,8 +73,11 @@ export default class MyApp extends App {
   }
   render() {
     const { Component, pageProps } = this.props;
+    const Page = ({ children }) => <>{children}</>;
 
-    const Layout = Component.layout || (({ children }) => <>{children}</>);
+    const Layout = Component.layout || Page;
+
+    const Auth = Component.Auth || Page;
 
     return (
       <React.Fragment>
@@ -86,9 +89,12 @@ export default class MyApp extends App {
           <title>InvertApp</title>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+
+        <Auth>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </Auth>
       </React.Fragment>
     );
   }

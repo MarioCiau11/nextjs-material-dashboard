@@ -14,6 +14,7 @@ import Danger from "components/Typography/Danger.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
+import WithPrivateRoute from "components/PrivateRoute/WithPrivateRoute";
 
 const styles = {
   typo: {
@@ -163,5 +164,5 @@ function TypographyPage() {
 }
 
 TypographyPage.layout = Admin;
-
+TypographyPage.Auth = WithPrivateRoute;
 export default TypographyPage;

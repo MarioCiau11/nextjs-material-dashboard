@@ -48,7 +48,7 @@ function login() {
   const classes = useStyles();
   return (
     <div className={classes.containterBody}>
-      <GridContainer md={4}>
+      <GridContainer item md={3}>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="dark">
