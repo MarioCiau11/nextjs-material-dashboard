@@ -11,6 +11,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import ImageFondo from "../../assets/img/bg7.jpg";
+import { Link } from "@material-ui/core";
 
 const styles = {
   cardCategoryWhite: {
@@ -82,10 +83,9 @@ function login() {
             </CardBody>
             {/* //poner link para registro */}
             <CardFooter>
-              <a href="/admin/register"
-              
-              
-              >¿No tienes una cuenta?</a>
+              <Link href="/admin/register" underline="hover" color="primary">
+                ¿Ya tienes una cuenta?
+              </Link>
             </CardFooter>
             <CardFooter>
               <Button color="success">Iniciar Sesión</Button>

@@ -49,7 +49,7 @@ function register() {
   return (
     <div className={classes.containterBody}>
       <GridContainer alignItems="center">
-        <GridItem xs={12} sm={12} md={12} >
+        <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="dark">
               <h4 className={classes.cardTitleWhite}>Iniciar Sesión</h4>
@@ -112,17 +112,12 @@ function register() {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Link href="/admin/login"
-              underline="hover"
-              color="primary"
-              >
-                <a>¿Ya tienes una cuenta?</a>
+              <Link href="/admin/login" underline="hover" color="primary">
+                ¿Ya tienes una cuenta?
               </Link>
             </CardFooter>
             <CardFooter>
-            <Button color="success">Registrarse
-            </Button>
-              
+              <Button color="success">Registrarse</Button>
             </CardFooter>
           </Card>
         </GridItem>
