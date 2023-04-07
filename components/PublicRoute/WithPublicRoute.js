@@ -2,18 +2,18 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
-const WithPrivateRoute = ({ children }) => {
+const WithPublicRoute = ({ children }) => {
   const router = useRouter();
   const { isLogginIn } = useSelector((state) => state.login.userInformacion);
 
   useEffect(() => {
     //validamos si el usuario esta loggueado
-    if (!isLogginIn) {
-      router.push("/admin/login");
+    if (isLogginIn) {
+      router.push("/admin/dashboard");
     }
   }, [children]);
 
   return <>{children}</>;
 };
 
-export default WithPrivateRoute;
+export default WithPublicRoute;

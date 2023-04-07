@@ -24,6 +24,8 @@ import Router from "next/router";
 import PageChange from "components/PageChange/PageChange.js";
 
 import "assets/css/nextjs-material-dashboard.css?v=1.1.0";
+import store from "../reducers/store";
+import { Provider } from "react-redux";
 
 Router.events.on("routeChangeStart", (url) => {
   document.body.classList.add("body-page-transition");
@@ -74,9 +76,7 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     const Page = ({ children }) => <>{children}</>;
-
     const Layout = Component.layout || Page;
-
     const Auth = Component.Auth || Page;
 
     return (
@@ -89,12 +89,13 @@ export default class MyApp extends App {
           <title>InvertApp</title>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         </Head>
-
-        <Auth>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </Auth>
+        <Provider store={store}>
+          <Auth>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </Auth>
+        </Provider>
       </React.Fragment>
     );
   }

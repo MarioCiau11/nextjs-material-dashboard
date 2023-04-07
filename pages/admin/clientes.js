@@ -73,7 +73,7 @@ function TableList() {
   );
 }
 
-TableList.layout = Admin;
 TableList.Auth = WithPrivateRoute;
+TableList.layout = Admin;
 
 export default TableList;

@@ -12,6 +12,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
 import ImageFondo from "../../assets/img/bg7.jpg";
 import { Link } from "@material-ui/core";
+import WithPublicRoute from "../../components/PublicRoute/WithPublicRoute";
 
 const styles = {
   cardCategoryWhite: {
@@ -96,4 +97,6 @@ function login() {
     </div>
   );
 }
+
+login.Auth = WithPublicRoute;
 export default login;

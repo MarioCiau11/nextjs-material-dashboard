@@ -273,6 +273,7 @@ function Dashboard() {
   );
 }
 
-Dashboard.layout = Admin;
 Dashboard.Auth = WithPrivateRoute;
+Dashboard.layout = Admin;
+
 export default Dashboard;
